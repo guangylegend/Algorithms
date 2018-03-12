@@ -42,7 +42,6 @@ namespace UnitTestSort {
 		TEST_METHOD(TestQuickSortReverse) {
 			vector<int> newVec({ 4,3,2,1 });
 			Sort::QuickSort(newVec);
-			Test_Sort_Print(newVec);
 			Assert::AreEqual(true, Test_Sort_Utility(newVec));
 		}
 

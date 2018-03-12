@@ -17,11 +17,12 @@ void Sort::QuickSortUtility(vector<int>& vec, int start, int end) {
 		}
 	}
 	swap(vec[prev - 1], vec[start]);
-	std::cout << prev << endl;
+	// Only for output test
+	/*std::cout << prev << endl;
 	for (int i = start; i <= end; i++) {
 		cout << vec[i] << " ";
 	}
-	cout << endl;
+	cout << endl;*/
 	QuickSortUtility(vec, start, prev - 2);
 	QuickSortUtility(vec, prev, end);
 }
