@@ -30,3 +30,10 @@
 *.exe
 *.out
 *.app
+/Sorting/Debug
+/Sorting/ipch/UNITTESTSORT-826a8de2
+/Sorting/Sorting/Debug
+/Sorting/TestResults
+/Sorting/UnitTestSort/Debug
+/Sorting/Sorting.VC.db
+/Sorting/Sorting.VC.VC.opendb
