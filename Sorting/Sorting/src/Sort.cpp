@@ -8,23 +8,23 @@ void Sort::QuickSort(vector<int>& vec) {
 void Sort::QuickSortUtility(vector<int>& vec, int start, int end) {
 	if (start >= end)return;
 	// can be randomized 
-	int selected = vec[start];
-	int prev = start + 1;
-	for (int i = end; i > start; i--) {
-		while (vec[i] < selected && prev <= i) {
+	int selected = vec[end];
+	int prev = start;
+	for (int i = start; i < end; i++) {
+		if (vec[i] <= selected) {
 			swap(vec[i], vec[prev]);
 			prev++;
 		}
 	}
-	swap(vec[prev - 1], vec[start]);
+	swap(vec[prev], vec[end]);
 	// Only for output test
 	/*std::cout << prev << endl;
 	for (int i = start; i <= end; i++) {
 		cout << vec[i] << " ";
 	}
 	cout << endl;*/
-	QuickSortUtility(vec, start, prev - 2);
-	QuickSortUtility(vec, prev, end);
+	QuickSortUtility(vec, start, prev - 1);
+	QuickSortUtility(vec, prev + 1, end);
 }
 
 void Sort::MergeSort(vector<int>& vec) {
